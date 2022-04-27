@@ -1,5 +1,7 @@
 package ru.skypro;
 
+import javax.sound.midi.Track;
+
 public class Main {
     public static void main(String[] args) {
         Transport car = new Car("car1", 4);
@@ -10,14 +12,8 @@ public class Main {
 
         Transport bicycle = new Bicycle("bicycle1",2);
         Transport bicycle2 = new Bicycle("bicycle2", 2);
-
-
-car.check();
-car2.check();
-truck.check();
-truck2.check();
-bicycle.check();
-bicycle2.check();
-
+        car.check(car);
+        truck.check(truck);
+        bicycle.check(bicycle);
     }
 }
